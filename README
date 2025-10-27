@@ -1,1 +1,14 @@
-README
+This project is a minimal automatic differentiation engine built completely from scratch in Python.
+It’s inspired by Andrej Karpathy’s micrograd series, where we learn how deep learning frameworks like PyTorch work under the hood. 
+
+This project implements a simple Value class that can:
+1) Perform basic mathematical operations (+, -, *, /, **, tanh, exp)
+2) Automatically compute gradients (via backpropagation)
+3) Build and traverse a computational graph
+4) Propagate gradients backward using reverse-mode autodiff
+
+In short, this code re-creates the core logic behind how PyTorch or TensorFlow compute derivatives during neural network training, but with no external dependencies.
+
+Features:
+Automatic differentiation — tracks operations and builds a computational graph dynamically.
+Backpropagation — efficiently computes gradients using a topological sort.
